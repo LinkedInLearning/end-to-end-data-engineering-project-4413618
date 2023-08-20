@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: big-star-collectibles-395410
+    schema: raw_data
+    freshness:
+      warn_after:
+        count: 24
+        period: hour
+    loaded_at_field: "_airbyte_normalized_at"
+    tables:
+      - name: customers
+      - name: orders
+      - name: products
+      - name: order_items
